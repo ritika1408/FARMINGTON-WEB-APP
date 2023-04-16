@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link href="{{ url_for('static', filename='css/cropstyles.css')}}" rel="stylesheet">
+</head>
+<body class="outerbody2 img" >
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="headingdiv">
+            <h2 class="heading-section">
+            GET INFORMED ADVICE ON FERTILIZERS BASED ON SOIL
+            </h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <div class="login-wrap p-0">
+              <form
+                class="signin-form"
+                method="POST"
+                action="{{ url_for('fert_recommend') }}"
+              >
+                  <div class="form-group">
+                      <label for="Nitrogen" style="font-size: 17px"><b>Nitrogen</b></label>
+          <input
+            type="number"
+            class="form-control"
+            id="Nitrogen"
+            name="nitrogen"
+            placeholder="Enter the value (example:50)"
+            style="font-weight: bold"
+            required
+          />
+         </div>
+                  <div class="form-group">
+      <label for="Phosphorus" style="font-size: 17px"
+        ><b>Phosphorus</b></label>
+      <input
+        type="number"
+        class="form-control"
+        id="Phosphorus"
+        name="phosphorus"
+        placeholder="Enter the value (example:50)"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="Potassium" style="font-size: 17px"><b>Potassium</b></label>
+      <input
+        type="number"
+        class="form-control"
+        id="Potassium"
+        name="potassium"
+        placeholder="Enter the value (example:50)"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+<!--     <div class="form-group">-->
+<!--      <label for="ph" style="font-size: 17px"><b>ph level</b></label>-->
+<!--      <input-->
+<!--        type="text"-->
+<!--        class="form-control"-->
+<!--        id="ph"-->
+<!--        name="ph"-->
+<!--        placeholder="Enter the value"-->
+<!--        style="font-weight: bold"-->
+<!--        required-->
+<!--      />-->
+<!--    </div>-->
+    <div class="form-group">
+
+      <label for="crop" style="font-size: 17px"
+        ><b>Crop you want to grow</b></label
+      >
+      <select
+        name="cropname"
+        class="form-control"
+        id="crop"
+        style="font-weight: bold; color: black;width:550px;height: 63px;"
+        required
+      >
+        <option selected>Select crop</option>
+        <option>Rice</option>
+        <option>Maize</option>
+        <option>Chick Pea</option>
+        <option>Kidney Beans</option>
+        <option>Pigeon Pea</option>
+        <option>Moth beans</option>
+        <option>Mung Bean</option>
+        <option>Black Gram</option>
+        <option>Lentil</option>
+        <option>Pomegranate</option>
+        <option>Banana</option>
+        <option>Mango</option>
+        <option>Grapes</option>
+        <option>Watermelon</option>
+        <option>Muskmelon</option>
+        <option>Apple</option>
+        <option>Orange</option>
+        <option>Papaya</option>
+        <option>Coconut</option>
+        <option>Cotton</option>
+        <option>Jute</option>
+        <option>Coffee</option>
+      </select>
+    </div>
+        <div class="btndiv">
+      <button
+        type="submit"
+        class="btn btn-info"
+        style="
+          color: white;
+          font-weight: bold;
+          width: 130px;
+          height: 50px;
+          border-radius: 12px;
+          font-size: 21px;
+        "
+      >
+        Predict
+      </button>
+    </div>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{disease}}</title>
+    <link href="{{ url_for('static', filename='css/cropstyles.css')}}" rel="stylesheet">
+<!--    	<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' />-->
+<!--	&lt;!&ndash; bootstrap css &ndash;&gt;-->
+<!--	<link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />-->
+<!--	&lt;!&ndash; custom css &ndash;&gt;-->
+<!--	<link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">&lt;!&ndash; fontawesome css &ndash;&gt;-->
+<!--	&lt;!&ndash; //css files &ndash;&gt;-->
+</head>
+<body class="outerbody3 img">
+ <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="headingdiv">
+            <h2 class="heading-section">
+             FIND OUT WHICH DISEASE HAS BEEN CAUGHT BY YOUR PLANT.
+            </h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <div class="login-wrap p-0">
+              <form
+                class="signin-form"
+                method="POST"
+                enctype=multipart/form-data
+                action="{{ url_for('disease_prediction')}}"
+              >
+                  <h2 class="h4 mb-3 font-weight-normal"><b>Please Upload The Image</b></h2>
+             <input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)" style="font-weight: bold;">
+             <br>
+                <br>
+               <img id="output-image" class="rounded mx-auto d-block" />
+
+
+
+
+
+                <div class="btndiv">
+                  <button
+                    type="submit"
+                    class="btn btn-info"
+                    style="
+                      color: white;
+                      font-weight: bold;
+                      width: 130px;
+                      height: 50px;
+                      border-radius: 12px;
+                      font-size:21px;"
+                  >
+                    Predict
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<script type="text/javascript">
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output-image')
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
+
+</body>
+</html>

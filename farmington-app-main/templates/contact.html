@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{contact}}</title>
+  <link href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='css/bootstrap.css')}}" rel="stylesheet" >
+</head>
+<body>
+
+<!--<div class="container">-->
+<!--      <div class="row">-->
+<!--        <div class="col-lg-8 col-md-10 mx-auto">-->
+<!--          <div class="page-heading">-->
+<!--            {% if msg_sent: %}-->
+<!--            <h1>Successfully sent your message</h1>-->
+<!--            {% else: %}-->
+<!--            <h1>Contact Me</h1>-->
+<!--            {% endif %}-->
+<!--            <span class="subheading">Have questions? I have answers.</span>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--</div>-->
+
+
+
+<!-- contact section -->
+
+  <section class="contact_section layout_padding">
+    <div class="contact_bg_box">
+      <div class="img-box">
+        <img src="{{ url_for('static', filename='assets/img/contact-bg.jpeg')}}" alt="contact us">
+      </div>
+    </div>
+    <div class="container">
+      <div class="heading_container heading_center">
+<!--        <h2 class="contectformtitle">-->
+<!--          Get In touch-->
+<!--        </h2>-->
+
+        <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            {% if msg_sent: %}
+            <h1>Successfully sent your message</h1>
+            {% else: %}
+            <h2 class="contectformtitle">CONTACT ME</h2>
+            {% endif %}
+            <span class="subheading">Have questions? I have answers.</span>
+          </div>
+        </div>
+      </div>
+</div>
+      </div>
+      <div class="">
+        <div class="row">
+          <div class="col-md-7 mx-auto">
+            <form name="sentMessage" action="{{ url_for('contact') }}" method="post">
+              <div class="contact_form-container">
+                <div>
+                  <div>
+                    <input name="fname"  type="text" placeholder="Full Name" />
+                  </div>
+                  <div>
+                    <input name = 'email' type="email" placeholder="Email " />
+                  </div>
+                  <div>
+                    <input name = 'phone' type="tel" placeholder="Phone Number" />
+                  </div>
+                  <div class="">
+                    <input name = 'message' type="text" placeholder="Message" class="message_input" />
+                  </div>
+                  <div class="btn-box ">
+                    <button type="submit">
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
+</body>
+</html>
