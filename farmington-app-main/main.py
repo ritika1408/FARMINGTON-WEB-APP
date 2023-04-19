@@ -18,6 +18,17 @@ import requests
 OWN_EMAIL = 'rpmfarmington@gmail.com'
 OWN_PASSWORD = 'rgfednyqhatcyfhq'
 
+
+# newsletter subscription api
+def subscribe(email, user_group_email, api_key):
+    r = requests.post(
+        f"https://api.mailgun.net/v3/lists/{user_group_email}/members",
+        auth=('api', api_key),
+        data={'subscribed': True,
+              'address': email})
+    return r
+
+
 # loading the crop recommendation model
 crop_recommendation_model_path = 'models/RandomForest.pkl'
 crop_recommendation_model = pickle.load(
@@ -56,9 +67,18 @@ app.debug = True
 
 
 # home route
-@app.route("/")
+@app.route("/", methods=["POST", "GET"])
 def home():
     title = 'FARMINGTON'
+
+    def index():
+        if request.method == "POST":
+            user_email = request.form.get('email')
+            response = subscribe(user_email=user_email,
+                                 user_group_email='farmington@sandboxc74dffa8f63e4c6f88fc4b3202287d2a.mailgun.org',
+                                 api_key='0cfdf4a1d9a6beeab37c3524df66b385-181449aa-a99f71e3')
+        return render_template("index.html", title=title)
+
     return render_template("index.html", title=title)
 
 
@@ -213,6 +233,9 @@ def contact():
         send_email(data["fname"], data["email"], data["phone"], data["message"])
         return render_template("contact.html", msg_sent=True, title=title)
     return render_template("contact.html", msg_sent=False, title=title)
+
+
+# NEWSLETTER SUBSCRIPTION
 
 
 def send_email(fname, email, phone, message):

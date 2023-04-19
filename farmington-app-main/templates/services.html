@@ -4,31 +4,50 @@
     <meta charset="UTF-8">
     <title>{{title}}</title>
     <link href="{{ url_for('static', filename='css/services.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<h1 class = "tagline">Streamlining Farm Operations</h1>
+<div class="container">
 
+	<div class="product-details">
 
-
-<div class = "wrapper">
-    <h1 class = "tagline">Streamlining Farm Operations</h1>
-
-    <img class="cropserviceimage" src="{{ url_for('static', filename='assets/img/cropservice.jpeg')}}">
-    <div class="text-box">
-        <h2> Crop Recommendation System</h2>
-        <p>An Intelligent Crop Recommendation system using Machine Learning that predicts crop suitability by factoring all relevant
-            data such as temperature, rainfall, location, ph and soil condition. This system is primarily concerned with performing
+        <p class="information">An Intelligent Crop Recommendation system using Machine Learning that
+            predicts crop suitability by factoring all relevant data such as temperature, rainfall, location, ph
+            and soil condition. This system is primarily concerned with performing
             AgroConsultant's principal role, which is to provide crop recommendations to farmers.
+            This helps the farmers to know the
+            crop yield in advance to plan and choose a crop that would give a better yield.
             The model focuses on predicting the crop yield in advance by analyzing factors like district
-            (assuming same weather and soil parameters in a particular district), state, season, crop type using various
-            supervised machine learning techniques. This helps the farmers to know the crop yield in advance to plan and choose a
-            crop that would give a better yield.
-        </p>
-    </div>
+            (assuming same weather and soil parameters in a particular district), state, season,
+            crop type using various supervised machine learning techniques.
+</p>
+<div class="control">
+<a href = "{{url_for('crop_recommendation')}}">
+	<button class="btn" >
+	 <span class="price">Test</span>
+<!--   <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>-->
+   <span class="buy">Predict</span>
+ </button>
+</a>
 
-     <img class="fertilizerserviceimage" src="{{ url_for('static', filename='assets/img/fertilizerservice.jpg')}}">
-    <div class="text-box2">
-        <h2> Fertilizer Suggestion System</h2>
-        <p>Soil nutrients can directly affect the growth of a crop and its production.
+</div>
+</div>
+
+<div class="product-image">
+    <img  src="{{ url_for('static', filename='assets/img/cropservice.jpeg')}}">
+<div class="info">
+<h1>CROP RECOMMENDATION SYSTEM</h1>
+</div>
+</div>
+
+</div>
+
+<div class ="container">
+
+	<div class="product-details">
+
+        <p class="information">Soil nutrients can directly affect the growth of a crop and its production.
             Plant diseases can also be caused due to insufficient levels of soil nutrients.
             On the contrary, applying an excessive amount of soil fertilizer may also result in the adverse crop
             development.
@@ -37,22 +56,70 @@
             such as humidity, temperature, and nitrogen, potassium, and phosphorus levels.
             Based on the given fertilizer recommendation.
 
-        </p>
-    </div>
+</p>
+<div class="control">
+<a href = "{{url_for('fertilizer_recommendation')}}">
+	<button class="btn" >
+	 <span class="price">Test</span>
+<!--   <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>-->
+   <span class="buy">Predict</span>
+ </button>
+</a>
 
-    <img class="cropserviceimage" src="{{ url_for('static', filename='assets/img/diseaseservice.jpg')}}">
-    <div class="text-box">
-        <h2> Disease Detection System</h2>
-        <p>Plant diseases affect the growth of their respective species, therefore their early
+</div>
+</div>
+
+<div class="product-image">
+    <img  src="{{ url_for('static', filename='assets/img/fertilizerservice.jpg')}}">
+<div class="info">
+<h1>FERTILIZER SUGGESTION SYSTEM</h1>
+</div>
+</div>
+
+</div>
+
+
+<div class ="container">
+
+	<div class="product-details">
+
+        <p class="information">Plant diseases affect the growth of their respective species, therefore their early
             identification is very important. Many Machine Learning (ML) models have been employed for
             the detection and classification of plant diseases
             and pest identification can be carried out by means of digital image processing.
             Our system uses machine vision equipment to acquire images to judge whether there are
             diseases and pests in the collected plant images.
 
-        </p>
-    </div>
+</p>
+<div class="control">
+<a href = "{{url_for('disease_detection')}}">
+	<button class="btn">
+	 <span class="price">Test</span>
+<!--   <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>-->
+   <span class="buy">Predict</span>
+ </button>
+</a>
 </div>
+</div>
+
+<div class="product-image">
+    <img  src="{{ url_for('static', filename='assets/img/diseaseservice.jpg')}}">
+<div class="info">
+<h1>DISEASE DETECTION SYSTEM</h1>
+</div>
+</div>
+
+</div>
+
+
+<a class = "homebtn" href = "{{url_for('home')}}">
+	<button class="btn">
+	 <span class="price">Go Back </span>
+        <span class="buy">Home</span>
+
+ </button>
+</a>
+
 </body>
 </html>
 
