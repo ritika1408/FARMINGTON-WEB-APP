@@ -2,9 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{title}}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link href="{{ url_for('static', filename='css/faqstyles.css')}}" rel="stylesheet">
+
 </head>
 <body>
-<h1>FAQ'S</h1>
+    <main class="card">
+  <div class="bgimg"></div>
+      <div class="hero">
+        <img src="https://localchildcaremarketing.com/wp-content/uploads/2019/07/faq-banner.png" alt="section image" class="img">
+      </div>
+  <div class="acc-container">
+
+    <button class="acc-btn">What is the definition of a will?</button>
+    <div class="acc-content">
+      <p>
+        It is a dead giveaway.
+      </p>
+    </div>
+
+    <button class="acc-btn">
+      What happens to chemists when they die?
+    </button>
+    <div class="acc-content">
+      <p>
+        We barium [bury them].
+      </p>
+    </div>
+
+    <button class="acc-btn">
+      Why does the leopard find it difficult to hide and stalk?
+    </button>
+    <div class="acc-content">
+      <p>
+        Because he is spotted always.
+      </p>
+    </div>
+
+    <button class="acc-btn">
+      What kind of key opens a banana?
+    </button>
+    <div class="acc-content">
+      <p>
+        A monkey. 🙈
+      </p>
+    </div>
+
+    <button class="acc-btn">
+      Why was everyone so tired on the First of April?
+    </button>
+    <div class="acc-content">
+      <p>
+        Because they had just completed a March of 31 days.
+      </p>
+    </div>
+
+  </div>
+</main>
+<script type="text/JavaScript" src="{{ url_for('static', filename='scripts/faqjs.js') }}"></script>
+
 </body>
 </html>
