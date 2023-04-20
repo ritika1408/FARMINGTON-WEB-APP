@@ -4,7 +4,8 @@
 
   body,
   html {
-    overflow-x: hidden;
+
+    overflow:hidden;
   }
 
   body {
@@ -108,11 +109,11 @@
     z-index: 2;
   }
 
-  @media screen and (max-width: 1353px) {
+  @media screen and (max-width: 1600px) {
     .about-us-info {
       margin-right: 400px;
       width: 60%;
-      background: #94C973;
+      background: rgba(148, 201, 115,0.8);
       padding: 0px 25px 0px 0px;
     }
   }

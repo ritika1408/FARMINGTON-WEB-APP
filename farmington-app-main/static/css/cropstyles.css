@@ -1,5 +1,6 @@
 
 body {
+height:100vh;
   margin: 0;
   font-size: 1rem;
   line-height: 1.5;
@@ -137,32 +138,6 @@ padding-bottom:2rem;}
     background-color: #e9ecef;
     opacity: 1; }
 
-/*.dropdown {
-  position: relative; }*/
-
-/*.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  display: none;
-  float: left;
-  min-width: 10rem;
-  padding: 0.5rem 0;
-  margin: 0.125rem 0 0;
-  font-size: 1rem;
-  color: #212529;
-  text-align: left;
-  list-style: none;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem; }
-
-.dropdown-item-text {
-  display: block;
-  padding: 0.25rem 1.5rem;
-  color: #212529; }*/
 
 
 .justify-content-center {

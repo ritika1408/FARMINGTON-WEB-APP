@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bree+Serif&family=EB+Garamond:ital,wght@0,500;1,800&display=swap');
-
+/*@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bree+Serif&family=EB+Garamond:ital,wght@0,500;1,800&display=swap');*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
 
 body {
 background: #DFC2F2;
@@ -12,10 +12,12 @@ background: #DFC2F2;
 
 .tagline{
 font-size: 60px;
-font-family: 'Bree Serif', serif;
+font-family: 'Roboto', serif;
 margin-bottom: 70px;
-text-transform: capitalize;
+/*text-transform: capitalize;*/
+ text-transform: uppercase;
 text-align:center;
+ word-spacing: 12px;
 
 }
 
@@ -93,12 +95,14 @@ font-family: 'EB Garamond', serif;
 }
 .control{
 	position: absolute;
-	bottom: 20%;
-	left: 22.8%;
+	margin-top:1rem;
+	left:25%;
+
+
 
 }
 .btn {
-
+     text-transform: uppercase;
 	transform: translateY(0px);
 	transition: 0.3s linear;
 	background: #94C973;
@@ -111,7 +115,6 @@ font-family: 'EB Garamond', serif;
 	color: #eee;
 	padding: 0;
     margin:0;
-	margin-top:10px;
 
 
 }
@@ -123,7 +126,7 @@ font-family: 'EB Garamond', serif;
 	background: #59981A;}
 
 .btn span {
-	font-family: 'Farsan', cursive;
+	/*font-family: 'Farsan', cursive;*/
 	transition: transform 0.3s;
 	display: inline-block;
   padding: 10px 20px;
@@ -160,6 +163,12 @@ font-family: 'EB Garamond', serif;
 text-align:center;
 }
 
+.btn_back{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom:2rem;
+}
 .product-image {
 	transition: all 0.3s ease-out;
 	display: inline-block;
@@ -175,14 +184,13 @@ text-align:center;
 
 .info {
     background: rgba(27, 26, 26, 0.9);
-    font-family: 'Bree Serif', serif;
+    font-family: 'Poppins', serif;
     transition: all 0.3s ease-out;
     transform: translateX(-100%);
     position: absolute;
     line-height: 1.8;
     text-align: center;
     font-size: 20px;
-
     cursor: no-drop;
     color: #FFF;
     height: 100%;
@@ -192,7 +200,9 @@ text-align:center;
 }
 
 .info h1 {text-align: center;
-margin-top:60px;
+margin-top:140px;
+padding-left:1rem;
+padding-right:1rem;
 }
 .product-image:hover .info{transform: translateX(0);}
 
