@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>{{title}}</title>
+       <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+<link rel="manifest" href="static/site.webmanifest">
     <link href="{{ url_for('static', filename='css/aboutstyles.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="we-are-block">
+        <h1 class="mission">OUR MISSION - Empowering Farmers, Enhancing Lives</h1>
 
         <div id="about-us-section">
+
 
           <div class="about-us-image">
 
@@ -25,11 +30,12 @@
 
             <p>We use state-of-the-art machine learning and deep learning technologies to help you
                 guide through
-                the entire farming process. Make informed decisions to understand the demographics of your area,
+                the entire farming process. You can make informed decisions to understand the demographics of your area,
                 understand the
-                factors that affect your crop and keep them healthy for a super awesome successful yield.</p>
+                factors that affect your crop and keep them healthy for a super awesome successful yield.
+            </p>
 
-            <a href="#" title="About Us Button">ABOUT US</a>
+            <a href="{{url_for('home')}}" title="About Us Button">Home</a>
 
           </div>
 
