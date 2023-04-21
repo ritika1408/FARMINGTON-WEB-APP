@@ -1168,7 +1168,9 @@ path {
   background-size: cover;
 }
 
-
+.from-center{
+margin-bottom:2rem;
+}
 /*home button style*/
 
 .homebtn {
